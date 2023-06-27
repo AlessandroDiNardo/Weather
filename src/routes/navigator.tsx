@@ -5,6 +5,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 // screens
 import Login from '../screens/Login';
 import Home from '../screens/Home';
+import Details from '../screens/Details';
 import SignIn from '../auth/SignIn'
 import SignUp from '../auth/SignUp'
 
@@ -14,38 +15,45 @@ function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator
-       screenOptions={{
-        headerShown: false
-      }}
-      initialRouteName="Login">
-        <Stack.Screen 
-        name="Login" 
-        component={Login}
-        options= {{ 
-          title: 'Login' 
-        }}/>
-        
+        screenOptions={{
+          headerShown: false
+        }}
+        initialRouteName="Login">
+        <Stack.Screen
+          name="Login"
+          component={Login}
+          options={{
+            title: 'Login'
+          }} />
 
-        <Stack.Screen 
-        name="Home" 
-        component={Home} 
-        options= {{ 
-            title: 'Home' 
-        }}/>
 
-        <Stack.Screen 
-        name="SignIn" 
-        component={SignIn} 
-        options= {{ 
-            title: 'SignIn' 
-        }}/>
+        <Stack.Screen
+          name="Home"
+          component={Home}
+          options={{
+            title: 'Home'
+          }} />
 
-        <Stack.Screen 
-        name="SignUp" 
-        component={SignUp} 
-        options= {{ 
-            title: 'SignUp' 
-        }}/>
+        <Stack.Screen
+          name="Details"
+          component={Details}
+          options={{
+            title: 'Details'
+          }} />
+
+        <Stack.Screen
+          name="SignIn"
+          component={SignIn}
+          options={{
+            title: 'SignIn'
+          }} />
+
+        <Stack.Screen
+          name="SignUp"
+          component={SignUp}
+          options={{
+            title: 'SignUp'
+          }} />
 
       </Stack.Navigator>
     </NavigationContainer>

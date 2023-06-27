@@ -1,45 +1,53 @@
 import React from 'react'
-import { StyleSheet, Text, TextInput, View} from 'react-native'
+import { StyleSheet, Text, TextInput, View, KeyboardAvoidingView} from 'react-native'
 import Header from '../components/header'
 import Footer from '../components/footer'
+import SCREENS from '../screens/screens'
 
-const SignUp = () => {
+const SignUp = ({navigation}: any) => {
+    const goToHome = () => {
+        navigation.navigate(SCREENS.HOME);
+    };
     return (
-        <View style={styles.mainContainer}>
-            <Header /> 
+        <KeyboardAvoidingView>
+            <View style={styles.mainContainer}>
+                <Header /> 
 
-            <View style={styles.logContainer}>
-                <View style={styles.inputContainer}>
-                    <Text style={styles.text}>Inserisci Nome</Text>
-                    <TextInput 
-                        placeholder='...'
-                        style={styles.input}
-                    />
+                <View style={styles.logContainer}>
+                    <View style={styles.inputContainer}>
+                        <Text style={styles.text}>Inserisci Nome</Text>
+                        <TextInput 
+                            placeholder='...'
+                            style={styles.input}
+                        />
+                    </View>
+
+                    <View style={styles.inputContainer}>
+                        <Text style={styles.text}>Inserisci l'email</Text>
+                        <TextInput 
+                            placeholder='...'
+                            style={styles.input}
+                        />
+                    </View>
+
+                    <View style={styles.inputContainer}>
+                        <Text style={styles.text}>Inserisci password</Text>
+                        <TextInput 
+                            placeholder='...'
+                            style={styles.input}
+                        />
+                    </View>
+
+                    <Text 
+                        style={styles.btnNavigate}
+                        onPress={goToHome}
+                    >REGISTRATI</Text>
                 </View>
 
-                <View style={styles.inputContainer}>
-                    <Text style={styles.text}>Inserisci l'email</Text>
-                    <TextInput 
-                        placeholder='...'
-                        style={styles.input}
-                    />
-                </View>
-
-                <View style={styles.inputContainer}>
-                    <Text style={styles.text}>Inserisci password</Text>
-                    <TextInput 
-                        placeholder='...'
-                        style={styles.input}
-                    />
-                </View>
-
-                <Text 
-                    style={styles.btnNavigate}
-                >REGISTRATI</Text>
+                <Footer />
             </View>
-
-            <Footer />
-        </View>
+        </KeyboardAvoidingView>
+        
     );
 }
 
