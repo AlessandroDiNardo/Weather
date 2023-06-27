@@ -1,7 +1,7 @@
 import React from 'react'
 import { StyleSheet, Text, TextInput, View} from 'react-native'
 import Header from '../components/header'
-import ReturnLogin from '../components/footer'
+import Footer from '../components/footer'
 
 const SignUp = () => {
     return (
@@ -38,7 +38,7 @@ const SignUp = () => {
                 >REGISTRATI</Text>
             </View>
 
-            <ReturnLogin />
+            <Footer />
         </View>
     );
 }

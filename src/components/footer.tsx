@@ -8,7 +8,7 @@ import LinearGradient from 'react-native-linear-gradient';
 
 
 
-const ReturnLogin = ()=> {
+const Footer = ()=> {
 
     const navigation = useNavigation();
 
@@ -59,4 +59,4 @@ const styles = StyleSheet.create({
     },
 })
 
-export default ReturnLogin;
+export default Footer;
