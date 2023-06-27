@@ -6,6 +6,7 @@ import SCREENS from '../screens/screens'
 
 const SignUp = ({navigation}: any) => {
     const goToHome = () => {
+        console.log('...')
         navigation.navigate(SCREENS.HOME);
     };
     return (
